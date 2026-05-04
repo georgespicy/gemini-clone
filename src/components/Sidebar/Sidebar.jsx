@@ -20,10 +20,9 @@ const Sidebar = () => {
           onClick={() => setExtended((prev) => !prev)}
           src={assets.menu_icon}
           alt="Menu Icon"
-          srcset=""
         />
         <div onClick={() => newChat()} className="new-chat">
-          <img src={assets.plus_icon} alt="" srcset="" />
+          <img src={assets.plus_icon} alt="" />
           {extended ? <p>New Chat</p> : null}
         </div>
         {extended ? (
@@ -32,7 +31,7 @@ const Sidebar = () => {
             {prevPrompts.map((item, index) => {
               return (
                 <div onClick={() => loadPrompt(item)} className="recent-entry">
-                  <img src={assets.message_icon} alt="" srcset="" />
+                  <img src={assets.message_icon} alt="" />
                   <p>{item.slice(0, 18)}...</p>
                 </div>
               );
@@ -42,15 +41,15 @@ const Sidebar = () => {
       </div>
       <div className="bottom">
         <div className="bottom-item recent-entry">
-          <img src={assets.question_icon} alt="" srcset="" />
+          <img src={assets.question_icon} alt="" />
           {extended ? <p>Help</p> : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.history_icon} alt="" srcset="" />
+          <img src={assets.history_icon} alt="" />
           {extended ? <p>Activity</p> : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.setting_icon} alt="" srcset="" />
+          <img src={assets.setting_icon} alt="" />
           {extended ? <p>Settings</p> : null}
         </div>
       </div>
